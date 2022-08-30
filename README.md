@@ -1,7 +1,7 @@
 # Jekyll Include Head
 
-This Jekyll plugin provides a tag that takes a relative .html file path and returns the contents of the <head> tag.
-The intended usage is the same as of include_relative tag. Unlike include_relative, this tag strips out stuff like <!DOCTYPE html> and the <body> tags.
+This Jekyll plugin provides a tag that takes a relative .html file path and returns the contents of the \<head\> tag.
+The intended usage is the same as of include_relative tag. Unlike include_relative, this tag strips out stuff like \<!DOCTYPE html\> and the \<body\> tags.
 
 ## Installation
 
@@ -43,4 +43,4 @@ plugins: [jekyll-incude-head]
 
 ## Result
 
-By default the plugin outputs the contents of the <head> tag of the included file.
+By default the plugin outputs the contents of the \<head\> tag of the included file.
