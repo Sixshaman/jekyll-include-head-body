@@ -9,24 +9,15 @@ Add this line to your Gemfile:
 
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-include-head"
+  gem "jekyll-include-head", :git => "https://github.com/Sixshaman/jekyll-include-head/"
 end
 ```
 
 And then execute:
 
-    $ bundle
-
-Alternatively install the gem yourself as:
-
-    $ gem install jekyll-include-head
+    $ bundle install
 
 and put this in your ``_config.yml`` 
-
-```yaml
-plugins: [jekyll-incude-head]
- # This will require each of these gems automatically.
-```
 
 ## Usage
 
