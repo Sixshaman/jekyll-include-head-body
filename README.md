@@ -1,6 +1,6 @@
 # Jekyll Include Head
 
-This Jekyll plugin provides a tag that takes a relative .html file path and returns the contents of the \<head\> tag.
+This Jekyll plugin provides a Liquid tag that takes a relative path to .html file path and returns the contents of the \<head\> tag.
 The intended usage is the same as of include_relative tag. Unlike include_relative, this tag strips out stuff like \<!DOCTYPE html\> and the \<body\> tags.
 
 ## Installation
@@ -17,8 +17,6 @@ And then execute:
 
     $ bundle install
 
-and put this in your ``_config.yml`` 
-
 ## Usage
 
 ```
@@ -34,4 +32,4 @@ and put this in your ``_config.yml``
 
 ## Result
 
-By default the plugin outputs the contents of the \<head\> tag of the included file.
+By default the plugin outputs the contents of the \<head\> tag of the specified file.
