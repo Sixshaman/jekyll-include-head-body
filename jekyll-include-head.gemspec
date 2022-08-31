@@ -6,8 +6,8 @@ require 'jekyll-include-head/version'
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-include-head"
   spec.version       = Jekyll::IncludeHead::VERSION
-  spec.authors       = ["Dommmel"]
-  spec.email         = ["dommmel@gmail.com"]
+  spec.authors       = ["Sixshaman"]
+  spec.email         = ["Shaman1234@gmail.com"]
 
   spec.summary       = %q{jekyll plugin to include the <head> of another HTML document}
   spec.description   = %q{jekyll plugin to include the <head> of another HTML document}
