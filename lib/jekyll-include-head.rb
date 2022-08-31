@@ -1,7 +1,7 @@
 require "jekyll"
 require "nokogiri"
 require "jekyll-include-head/version"
-class YouTubeEmbed < Liquid::Tag
+class IncludeHead < Liquid::Tag
 
   def initialize(tagName, content, tokens)
     super
