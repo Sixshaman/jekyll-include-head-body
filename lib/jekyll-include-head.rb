@@ -8,6 +8,24 @@ class IncludeHead < Liquid::Tag
     @content = content.strip
   end
 
+  def change_relative_src(html_node, new_relative_path)
+    if html_node.class.method_defined? "attributes"
+      html_node.attributes.each do |attr_name, attr_info|
+        if attr_name == "src" || attr_name == "href"
+          unless attr_info.content.start_with?("http://") || attr_info.content.start_with?("https://")
+            attr_info.content = new_relative_path + attr_info.content
+          end
+        end
+      end
+    end
+
+    if html_node.class.method_defined? "children"
+      for child_node in html_node.children
+        change_relative_src(child_node, new_relative_path)
+      end
+    end
+  end
+
   def render(context)
     curr_dir = context.environments.first['page']['dir']
     if(curr_dir.start_with?("/"))
@@ -17,7 +35,13 @@ class IncludeHead < Liquid::Tag
     file_contents = File.read(curr_dir + "/" + @content)
     parsed_html = Nokogiri::HTML.parse(file_contents)
 
-    parsed_html.xpath("/html/head")
+    head_contents = parsed_html.xpath("/html/head")
+
+    #Replace "href" and "src" attributes with new relative path
+    relative_path = @content[0..@content.rindex("/")]
+    change_relative_src(head_contents, relative_path)
+
+    head_contents
   end
 
   Liquid::Template.register_tag "include_head", self
