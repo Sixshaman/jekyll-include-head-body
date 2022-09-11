@@ -28,9 +28,10 @@ class IncludeHead < Liquid::Tag
 
   def render(context)
     curr_dir = context.environments.first['page']['dir']
-    if(curr_dir.start_with?("/"))
-      curr_dir.gsub!(/^\/+/, "")
-    end
+
+    #Remove "/" at the start and the end of curr_dir
+    curr_dir.gsub!(/^\/+/, "")
+    curr_dir.gsub!(/\/+$/, "")
 
     file_contents = File.read(curr_dir + "/" + @content)
     parsed_html = Nokogiri::HTML.parse(file_contents)
