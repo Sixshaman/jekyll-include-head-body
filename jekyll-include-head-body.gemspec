@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{jekyll plugin to include the <head> or <body> of another HTML document}
   spec.description   = %q{jekyll plugin to include the <head> or <body> of another HTML document}
-  spec.homepage      = "https://github.com/Sixshaman/jekyll-include-head"
+  spec.homepage      = "https://github.com/Sixshaman/jekyll-include-head-body"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
