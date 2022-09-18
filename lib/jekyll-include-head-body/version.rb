@@ -1,5 +1,5 @@
 module Jekyll
-  module IncludeHead
-    VERSION = "1.0.0"
+  module IncludeHeadBody
+    VERSION = "1.1.0"
   end
 end

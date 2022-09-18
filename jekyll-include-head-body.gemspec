@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jekyll-include-head/version'
+require 'jekyll-include-head-body/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-include-head"
-  spec.version       = Jekyll::IncludeHead::VERSION
+  spec.name          = "jekyll-include-head-body"
+  spec.version       = Jekyll::IncludeHeadBody::VERSION
   spec.authors       = ["Sixshaman"]
   spec.email         = ["Shaman1234@gmail.com"]
 
-  spec.summary       = %q{jekyll plugin to include the <head> of another HTML document}
-  spec.description   = %q{jekyll plugin to include the <head> of another HTML document}
+  spec.summary       = %q{jekyll plugin to include the <head> or <body> of another HTML document}
+  spec.description   = %q{jekyll plugin to include the <head> or <body> of another HTML document}
   spec.homepage      = "https://github.com/Sixshaman/jekyll-include-head"
   spec.license       = "MIT"
 
