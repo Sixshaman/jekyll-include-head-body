@@ -22,7 +22,20 @@ And then execute:
 ```
 <html>
 <head>
-{% include_head file.html %}
+  {% include_head file.html %}
+</head>
+<body>
+
+</body>
+</html>
+```
+
+Usage with relative paths is a bit more complicated:
+```
+<html>
+<head>
+  <base href="{{ site.url }}{{ page.url }}/">
+  {% include_head src/file.html %}
 </head>
 <body>
 
