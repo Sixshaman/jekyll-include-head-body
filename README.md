@@ -1,4 +1,4 @@
-# Jekyll Include Head
+# Jekyll Include Head-Body
 
 This Jekyll plugin provides two Liquid tags that take a relative path to .html file path.
 - The tag {% include_head %} returns the contents of the \<head\> HTML tag.
